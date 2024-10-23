@@ -1,0 +1,743 @@
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/vEikhC7KMsj
+-->
+
+<style>:root{--background:0 0% 100%;--foreground:240 10% 3.9%;--card:0 0% 100%;--card-foreground:240 10% 3.9%;--popover:0 0% 100%;--popover-foreground:240 10% 3.9%;--primary:240 5.9% 10%;--primary-foreground:0 0% 98%;--secondary:240 4.8% 95.9%;--secondary-foreground:240 5.9% 10%;--muted:240 4.8% 95.9%;--muted-foreground:240 3.8% 45%;--accent:240 4.8% 95.9%;--accent-foreground:240 5.9% 10%;--destructive:0 72% 51%;--destructive-foreground:0 0% 98%;--border:240 5.9% 90%;--input:240 5.9% 90%;--ring:240 5.9% 10%;--chart-1:173 58% 39%;--chart-2:12 76% 61%;--chart-3:197 37% 24%;--chart-4:43 74% 66%;--chart-5:27 87% 67%;--radius:0.5rem;}img[src="/placeholder.svg"],img[src="/placeholder-user.jpg"]{filter:sepia(.3) hue-rotate(-60deg) saturate(.5) opacity(0.8) }</style>
+<style>h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; --font-sans-serif: 'Inter'; }
+</style>
+<style>body { font-family: 'Inter', sans-serif; --font-sans-serif: 'Inter'; }
+</style>
+<div class="flex min-h-screen w-full flex-col bg-muted/40">
+  <aside class="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
+    <nav class="flex flex-col items-center gap-4 px-2 sm:py-5">
+      <a
+        class="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+        href="#"
+        rel="ugc"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-4 w-4 transition-all group-hover:scale-110"
+        >
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+        <span class="sr-only">Acme Restaurant</span>
+      </a>
+      <a
+        class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+        data-state="closed"
+        href="#"
+        rel="ugc"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+          <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+          <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+          <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+        </svg>
+        <span class="sr-only">Dashboard</span>
+      </a>
+      <a
+        class="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+        data-state="closed"
+        href="#"
+        rel="ugc"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <circle cx="8" cy="21" r="1"></circle>
+          <circle cx="19" cy="21" r="1"></circle>
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+        </svg>
+        <span class="sr-only">Orders</span>
+      </a>
+      <a
+        class="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+        data-state="closed"
+        href="#"
+        rel="ugc"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+        <span class="sr-only">Menu</span>
+      </a>
+      <a
+        class="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+        data-state="closed"
+        href="#"
+        rel="ugc"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span class="sr-only">Customers</span>
+      </a>
+    </nav>
+    <nav class="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
+      <a
+        class="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+        data-state="closed"
+        href="#"
+        rel="ugc"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <span class="sr-only">Settings</span>
+      </a>
+    </nav>
+  </aside>
+  <div class="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+    <header class="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 sm:hidden"
+        type="button"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="radix-:rf:"
+        data-state="closed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+        <span class="sr-only">Toggle Menu</span>
+      </button>
+      <nav aria-label="breadcrumb" class="hidden md:flex">
+        <ol class="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5">
+          <li class="inline-flex items-center gap-1.5">
+            <a class="transition-colors hover:text-foreground" href="#" rel="ugc">
+              Dashboard
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div class="relative ml-auto flex-1 md:grow-0">
+        <div class="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"></div>
+        <input
+          class="flex h-10 border border-input px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
+          placeholder="Search..."
+          type="search"
+        />
+      </div>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 overflow-hidden rounded-full"
+        type="button"
+        id="radix-:ri:"
+        aria-haspopup="menu"
+        aria-expanded="false"
+        data-state="closed"
+      >
+        <img
+          src="/placeholder.svg"
+          width="36"
+          height="36"
+          alt="Avatar"
+          class="overflow-hidden rounded-full"
+          style="aspect-ratio: 36 / 36; object-fit: cover;"
+        />
+      </button>
+    </header>
+    <main class="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+      <section id="dashboard" class="grid w-full gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="rounded-lg border bg-card text-card-foreground shadow-sm sm:col-span-2 lg:col-span-1"
+          data-v0-t="card"
+        >
+          <div class="flex flex-col space-y-1.5 p-6 pb-3">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Sales</h3>
+            <p class="text-sm text-muted-foreground max-w-lg text-balance leading-relaxed">
+              Overview of your restaurant's sales performance.
+            </p>
+          </div>
+          <div class="p-6">
+            <div class="w-full aspect-[4/3]">
+              <div style="width: 100%; height: 100%;">
+                <div style="position: relative;">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="394"
+                    height="295.5"
+                    role="application"
+                    aria-label="A bar chart showing data"
+                    focusable="false"
+                  >
+                    <rect width="394" height="295.5" fill="transparent"></rect>
+                    <g transform="translate(40,0)">
+                      <g>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="354"
+                          y1="256"
+                          y2="256"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line
+                          opacity="1"
+                          x1="0"
+                          x2="354"
+                          y1="174"
+                          y2="174"
+                          stroke="#f3f4f6"
+                          stroke-width="1"
+                        ></line>
+                        <line opacity="1" x1="0" x2="354" y1="93" y2="93" stroke="#f3f4f6" stroke-width="1"></line>
+                        <line opacity="1" x1="0" x2="354" y1="11" y2="11" stroke="#f3f4f6" stroke-width="1"></line>
+                      </g>
+                      <g transform="translate(0,255.5)">
+                        <g transform="translate(37,0)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            Jan
+                          </text>
+                        </g>
+                        <g transform="translate(93,0)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            Feb
+                          </text>
+                        </g>
+                        <g transform="translate(149,0)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            Mar
+                          </text>
+                        </g>
+                        <g transform="translate(205,0)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            Apr
+                          </text>
+                        </g>
+                        <g transform="translate(261,0)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            May
+                          </text>
+                        </g>
+                        <g transform="translate(317,0)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="text-before-edge"
+                            text-anchor="middle"
+                            transform="translate(0,16) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            Jun
+                          </text>
+                        </g>
+                        <line x1="0" x2="354" y1="0" y2="0" style="stroke: transparent; stroke-width: 1;"></line>
+                      </g>
+                      <g transform="translate(0,0)">
+                        <g transform="translate(0,256)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            0
+                          </text>
+                        </g>
+                        <g transform="translate(0,174)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            50
+                          </text>
+                        </g>
+                        <g transform="translate(0,93)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            100
+                          </text>
+                        </g>
+                        <g transform="translate(0,11)" style="opacity: 1;">
+                          <line
+                            x1="0"
+                            x2="0"
+                            y1="0"
+                            y2="0"
+                            style="stroke: rgb(119, 119, 119); stroke-width: 1;"
+                          ></line>
+                          <text
+                            dominant-baseline="central"
+                            text-anchor="end"
+                            transform="translate(-16,0) rotate(0)"
+                            style="font-family: sans-serif; font-size: 11px; fill: rgb(51, 51, 51);"
+                          >
+                            150
+                          </text>
+                        </g>
+                        <line x1="0" x2="0" y1="0" y2="255.5" style="stroke: transparent; stroke-width: 1;"></line>
+                      </g>
+                      <g transform="translate(17, 75)">
+                        <rect
+                          width="36.94227199426609"
+                          height="181"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(73, 0)">
+                        <rect
+                          width="36.94227199426609"
+                          height="256"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(129, 46)">
+                        <rect
+                          width="36.94227199426609"
+                          height="210"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(185, 11)">
+                        <rect
+                          width="36.94227199426609"
+                          height="245"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(241, 62)">
+                        <rect
+                          width="36.94227199426609"
+                          height="194"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                      <g transform="translate(297, 138)">
+                        <rect
+                          width="36.94227199426609"
+                          height="118"
+                          rx="0"
+                          ry="0"
+                          fill="#2563eb"
+                          stroke-width="0"
+                          stroke="#2563eb"
+                          focusable="false"
+                        ></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6 pb-2">
+            <p class="text-sm text-muted-foreground">This Week</p>
+            <h3 class="whitespace-nowrap font-semibold tracking-tight text-4xl">$12,329</h3>
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-muted-foreground">+25% from last week</div>
+          </div>
+          <div class="flex items-center p-6">
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              role="progressbar"
+              data-state="indeterminate"
+              data-max="100"
+              class="relative h-2 w-full overflow-hidden rounded-full bg-primary/20"
+              aria-label="25% increase"
+            >
+              <div
+                data-state="indeterminate"
+                data-max="100"
+                class="h-full w-full flex-1 bg-primary transition-all"
+                style="transform: translateX(-75%);"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6 pb-2">
+            <p class="text-sm text-muted-foreground">This Month</p>
+            <h3 class="whitespace-nowrap font-semibold tracking-tight text-4xl">$45,329</h3>
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-muted-foreground">+10% from last month</div>
+          </div>
+          <div class="flex items-center p-6">
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              role="progressbar"
+              data-state="indeterminate"
+              data-max="100"
+              class="relative h-2 w-full overflow-hidden rounded-full bg-primary/20"
+              aria-label="12% increase"
+            >
+              <div
+                data-state="indeterminate"
+                data-max="100"
+                class="h-full w-full flex-1 bg-primary transition-all"
+                style="transform: translateX(-88%);"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="orders" class="grid w-full gap-4">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6 px-7">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Recent Orders</h3>
+            <p class="text-sm text-muted-foreground">View and manage your restaurant's orders.</p>
+          </div>
+          <div class="p-6">
+            <div class="relative w-full overflow-auto">
+              <table class="w-full caption-bottom text-sm">
+                <thead class="[&amp;_tr]:border-b">
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                      Order
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      Customer
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      Status
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      Date
+                    </th>
+                    <th class="h-12 px-4 align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 text-right">
+                      Amount
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="[&amp;_tr:last-child]:border-0">
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-accent">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <div class="font-medium">#1234</div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div class="font-medium">John Doe</div>
+                      <div class="hidden text-sm text-muted-foreground md:inline">john@example.com</div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 text-xs"
+                        data-v0-t="badge"
+                      >
+                        Delivered
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      2023-06-23
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">$250.00</td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <div class="font-medium">#1235</div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div class="font-medium">Jane Smith</div>
+                      <div class="hidden text-sm text-muted-foreground md:inline">jane@example.com</div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground text-xs"
+                        data-v0-t="badge"
+                      >
+                        Pending
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      2023-06-24
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">$150.00</td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <div class="font-medium">#1236</div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div class="font-medium">Bob Johnson</div>
+                      <div class="hidden text-sm text-muted-foreground md:inline">bob@example.com</div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 text-xs"
+                        data-v0-t="badge"
+                      >
+                        Delivered
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      2023-06-25
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">$350.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="menu" class="grid w-full gap-4">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6 px-7">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Menu Items</h3>
+            <p class="text-sm text-muted-foreground">Manage your restaurant's menu items.</p>
+          </div>
+          <div class="p-6">
+            <div class="relative w-full overflow-auto">
+              <table class="w-full caption-bottom text-sm">
+                <thead class="[&amp;_tr]:border-b">
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden w-[100px] sm:table-cell">
+                      <span class="sr-only">Image</span>
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                      Name
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                      Category
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      Price
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      Inventory
+                    </th>
+                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                      <span class="sr-only">Actions</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="[&amp;_tr:last-child]:border-0">
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <img
+                        alt="Menu item"
+                        class="aspect-square rounded-md object-cover"
+                        height="64"
+                        src="/placeholder.svg"
+                        width="64"
+                      />
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">Margherita Pizza</td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                        data-v0-t="badge"
+                      >
+                        Pizza
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">$15.99</td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
