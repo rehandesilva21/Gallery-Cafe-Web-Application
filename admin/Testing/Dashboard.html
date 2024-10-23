@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+  
+    <title>Dashboard</title>
+</head>
+<body> 
+    
+<!--Navigation bar-start-->
+
+    <div class="header"><h1>Welcome <span>Name</span></h1></div>
+    <div class="sidenavbtns">
+        
+        <div class="btnssides">
+            <ul >
+                <li><input type ="button" value ="Dashboard" onclick="opendash()" title ="Shift + D"></li>
+                <li><input type ="button" value ="Categories" onclick="opencats()"></li>
+                <li><input type ="button" value ="Menu" onclick="openmenu()"></li>
+                <li><input type ="button" value ="Orders" onclick="openorders()"></li>
+                <li><input type ="button" value ="Promotions" onclick="openpromo()"></li>
+                <li><input type ="button" value ="Events" onclick="openevents()"></li>
+                <li><input type ="button" value ="Reservations" onclick="openreserv()"></li>
+                <li><input type ="button" value ="Settings" onclick="opensettings()"></li>
+                <li class = "logoutdash"><input type ="button" value ="Logout"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Navigation bar-End-->
+
+    <!--Dashboard- Start-->
+
+<div class="dashboard" id ="dashboard">
+    <div class="pricingtdy">
+        
+        <h2>00.00 LKR<br><span>Today's Selling</span></h2>
+        <h2>0<br><span>Active users</span></h2>
+        <h2>0<br><span>Food Categories</span></h2>
+    </div>
+    <div class="usertable">
+        <h1>Active Users</h1>
+        <table class="usertable1">
+            
+            <tr>
+                <th>Name</th>
+                <th>Name</th>
+                <th>Name</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>Namelorem ipsum</td>
+                <td>Name lorem ipsum</td>
+                <td>Name lorem ipsum</td>
+                <td>Name lorem ipsum</td>
+            </tr>
+        </table>
+    </div>
+
+        <!--Chart- Start -->
+
+    <canvas id="myChart" style="width:40vw; max-width:40vw;max-height: 25vh;"></canvas>
+    <div class="usertableb">
+        <h1>Recent Orders</h1>
+        <table class="usertable2">
+            
+            <tr>
+                <th>Customer Name</th>
+                <th>Order</th>
+                
+            </tr>
+            <tr>
+                <td>Namelorem ipsum</td>
+                <td>Name lorem ipsum</td>
+                
+            </tr>
+        </table>
+    </div>
+
+        <!--Chart -End-->
+
+        <!--Net-worth- Start-->
+
+    <div class="networth">
+        <h1>Net Worth</h1>
+        <h2>00.00<span><br>LKR</span></h2>
+    </div>
+</div>
+
+    <!--Net-worth-end-->
+
+    <!--Categories- Start-->
+    
+    <section>
+        <div class="categories" id="categories">
+            <h1>Categories</h1>
+            <div class="catbox">
+                <h1>Current Categories</h1>
+          
+                <div class="cats">
+                    <h1>Chiness</h1>
+                </div>
+                <div class="cats">
+                    <h1>Chiness</h1>
+                </div>
+                <div class="cats">
+                    <h1>Chiness</h1>
+                </div>
+                <div class="cats">
+                    <h1>Chiness</h1>
+                </div>
+                <div class="cats">
+                    <h1>Chiness</h1>
+                </div>
+            </div>
+            <div class="catbox1">
+                <h1>Add a New Category</h1>
+                <div class="addcatform">
+                    <form action="">
+                        <input type="text" placeholder="Enter Category Name">
+                        <input type="text" placeholder="Enter Category number">
+                        <input type="text" placeholder="Enter Creator's Name">
+                        
+                        <input type="file" name="" id="" title="Add Your Category Image">
+                        <input type="submit" value="Submit">
+                           
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+        <!--Categories- End-->
+
+         <!--Orders-Start-->
+
+    <section>
+        <div class="orders" id="orders">
+            <h1>Orders</h1>
+            <input type="search" name="" id="search" placeholder="Search Orders" >
+
+            <div class="order-table">
+                <table class="order-table1">
+            
+                    <tr>
+                        <th>Order Name</th>
+                        <th>Customer name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>Namelorem ipsum</td>
+                        <td>Name lorem ipsum</td>
+                        <td>Name lorem ipsum</td>
+                        <td>Name lorem ipsum</td>
+                        
+                    </tr>
+                </table>
+          </div>
+
+
+        </div>
+    </section> 
+    
+     <!--Orders- End-->
+
+      <!--Menu-Start-->
+
+    <section>
+        <div class="categories1" id="categories1">
+            <h1>Add New Menu or Item</h1>
+            <input type="button" value="Add Item or Menu" class= "programmed-btn" onclick="addnewmenu()">
+            <input type="search" name="" id="search" placeholder="Search item or menu" >
+            <div class="menu-scroller">
+                <table class="Menutable1">
+            
+                    <tr>
+                        <th>Date</th>
+                        <th>Menus</th>
+                        <th>Items</th>
+                        <th>Prices</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>Namelorem ipsum</td>
+                        <td>Name lorem ipsum</td>
+                        <td>Name lorem ipsum</td>
+                        <td>Name lorem ipsum</td>
+                        
+                    </tr>
+                </table>
+          </div>
+        <div class="blackback" id="addmenu1">
+        <div class="addmenuback" id ="addmenu">
+        <div class="addmenu-or-item">
+            <p style="cursor: pointer;" onclick="closenewmenu()"><i class="fa-solid fa-xmark"></i></p>
+            <form action="">
+                
+                <input type="text" placeholder="Enter Menu name">
+                <input type="text" placeholder="Enter Items"><br>
+                 <input type="date" placeholder="Enter Date">
+                <input type="text" placeholder="Enter Creator's Name"><br>
+                
+                <input type="file" name="" id="" title="Add Your Category Image"><br>
+                <input type="submit" value="Submit">
+                   
+            </form>
+           </div>
+           </div>
+        </div>
+        </div>
+          </section>
+
+           <!--Menu- End-->
+
+        <!--Promotion-Area-Start-->
+        <section>
+            <div class="promotions" id="promotions">
+                <h1>Promotions</h1>
+                <input type="button" value="Add a new promotion" class= "programmed-btn" onclick="addnewpromo()">
+                <div class="promo-table">
+                    <table class="promo-table1">
+                
+                        <tr>
+                            <th>Start Date</th>
+                            <th>Promotion Code</th>
+                            <th>Promotion Name</th>
+                            <th>Promotion Description</th>
+                            <th>End Date</th>
+                            
+                        </tr>
+                        <tr>
+                            <td>Namelorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                        </tr>
+                    </table>
+              </div>
+              <div class="blackback1" id="add-promo">
+                <div class="addpromo-back" id ="add-promo-1">
+                <div class="add-promotion">
+                    <p style="cursor: pointer;" onclick="closenewpromo()"><i class="fa-solid fa-xmark"></i></p>
+                    <form action="">
+                        <label>Start Date</label>
+                        <input type="date" placeholder="Enter Date">
+                        <input type="text" placeholder="Enter Promotion Name">
+                        <input type="text" placeholder="Enter Promotion Description">
+                        <label>End Date</label>
+                         <input type="date" placeholder="Enter Date">
+                        <input type="text" placeholder="Enter Creator's Name"><br>
+                        
+                        <input type="file" name="" id="" title="Add Your Category Image"><br>
+                        <input type="submit" value="Submit">
+                           
+                    </form>
+                </div>
+                </div>
+                </div>
+              
+         </section>
+
+         <!-- event area start -->
+         <section>
+            <div class="events" id="events">
+                <h1>Events</h1>
+                <input type="button" value="Add a new Event" class= "programmed-btn" onclick="addnewevent() ">
+                <div class="event-table">
+                    <table class="event-table1">
+                
+                        <tr>
+                            <th>Event Date</th>
+                            <th>Event Time</th>
+                            <th>Event Name</th>
+                            <th>Event Description</th>
+                            <th>Venue</th>
+                            
+                        </tr>
+                        <tr>
+                            <td>Namelorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                        </tr>
+                    </table>
+              </div>
+              <div class="blackback2" id="add-event">
+                <div class="addevent-back" id ="add-event-1">
+                <div class="add-event">
+                    <p style="cursor: pointer;" onclick="closenewevent()"><i class="fa-solid fa-xmark"></i></p>
+                    <form action="">
+                        <label>Event Date</label>
+                        <input type="date" placeholder="Enter Date">
+                        <label>Event Time </label>
+                         <input type="time" placeholder="Enter Date">
+                        <input type="text" placeholder="Enter Event Name">
+                        <input type="text" placeholder="Enter Event Description">
+                        <input type="text" placeholder="Enter Venue">
+                        
+                        <input type="text" placeholder="Enter Creator's Name"><br>
+                        
+                        <input type="file" name="" id="" title="Add Your Category Image"><br>
+                        <input type="submit" value="Submit">
+                           
+                    </form>
+                </div>
+                </div>
+                </div>
+         </section>
+         <!--Event Area End-->
+
+         <!--reservation area start-->
+         <section>
+            <div class="reserv" id="reserv">
+                <h1>Reservations</h1>
+                <input type="search" name="" id="search" placeholder="Search Reservations" >
+                <div class="reserv-table">
+                    <table class="reserv-table1">
+                
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Resevation Date</th>
+                            <th>Reservation Time</th>
+                            <th>Reservation Title</th>
+                            <th>Reservation Description</th>
+                            
+                        </tr>
+                        <tr>
+                            <td>Namelorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                            <td>Name lorem ipsum</td>
+                        </tr>
+                    </table>
+              </div>
+
+            </div>
+        </section>
+
+            <!--Settings-Start-->
+  
+        <section>
+            <div class="settings" id="settings">
+                <h1>Settings</h1>
+                <div class="settings-panel">
+                    <div class="set-tags">
+                        <h3>System Version</h3>
+                    </div>
+                    <div class="set-tags">
+                        <h3>Manufacture ID</h3>
+                    </div>
+                    <div class="set-tags">
+                        <h3>Last Update</h3>
+                    </div>
+                    <div class="set-tags">
+                        <h3>Last Update</h3>
+                    </div>
+                    <div class="set-tags">
+                        <h3>Running On</h3>
+                    </div>
+                    <div class="set-tags">
+                        <h3>Last Loging </h3>
+                    </div>
+                    <div class="set-tags set-delete">
+                        <h3 class="del">Delete Account</h3>
+                    </div>
+                    <div class="set-descriptions">
+                    <div class="set-des">
+                        <h3>System Version</h3>
+                    </div>
+                    <div class="set-des">
+                        <h3>Manufacture ID</h3>
+                    </div>
+                    <div class="set-des">
+                        <h3>Last Update</h3>
+                    </div>
+                    <div class="set-des">
+                        <h3>Last Update</h3>
+                    </div>
+                    <div class="set-des">
+                        <h3 id ="web-ver">Running On</h3>
+                    </div>
+                    <div class="set-des">
+                        <h3 id ="date">Last Loging </h3>
+                    </div>
+                </div>
+
+                </div>
+                <div class="system-info">
+                <iframe id="monitor-embed" src="http://127.0.0.1:5100/" title="System Usage Monitor" width="500px" height="450px" ></iframe>
+                
+            </div>
+            <div class="key-shorts-mac">
+                <h1>Keyboard Shortcuts -&nbsp;<i class="fa-brands fa-apple"></i></h1>
+                <div class="mac-shortcuts-1">
+                    <ul>
+                        <li>Dashboard:   </li>
+                        <li>Categories: </li>
+                        <li>Menu:       </li>
+                        <li>Orders:      </li>
+                        <li>Promotions:  </li>
+                        <li>Events:      </li>
+                        <li>Reservations:</li>
+                        <li>Settings:    </li>
+                        
+                    </ul>
+                </div>
+                <div class="mac-shortcuts-1-1">
+                    <ul>
+                        <li>Shift + D  </li>
+                        <li>Shift + C </li>
+                        <li>Shift + M       </li>
+                        <li>Shift + O    </li>
+                        <li>Shift + P</li>
+                        <li>Shift + E      </li>
+                        <li>Shift + R</li>
+                        <li>Shift + S  </li>
+                        
+                    </ul>
+                </div>
+                <div class="shortcut-section2">
+                    <div class="mac-shortcuts-1">
+                        <ul>
+                            <li>Add Items:   </li>
+                            <li>Add Promotions: </li>
+                            <li>Add Events:       </li>
+                            
+                            
+                        </ul>
+                    </div>
+                    <div class="mac-shortcuts-1-2">
+                        <ul>
+                            <li>Command + i  </li>
+                            <li>Command + p </li>
+                            <li>Command + e       </li>
+                           
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+           <div class="key-shorts-windows">
+            <h1>Keyboard Shortcuts -&nbsp;<i class="fa-brands fa-windows"></i></h1>
+            <div class="mac-shortcuts-1">
+                <ul>
+                    <li>Dashboard:   </li>
+                    <li>Categories: </li>
+                    <li>Menu:       </li>
+                    <li>Orders:      </li>
+                    <li>Promotions:  </li>
+                    <li>Events:      </li>
+                    <li>Reservations:</li>
+                    <li>Settings:    </li>
+                    
+                </ul>
+            </div>
+            <div class="mac-shortcuts-1-1">
+                <ul>
+                    <li>Shift + D  </li>
+                    <li>Shift + C </li>
+                    <li>Shift + M       </li>
+                    <li>Shift + O    </li>
+                    <li>Shift + P</li>
+                    <li>Shift + E      </li>
+                    <li>Shift + R</li>
+                    <li>Shift + S  </li>
+                    
+                </ul>
+            </div>
+            <div class="shortcut-section2">
+                <div class="mac-shortcuts-1">
+                    <ul>
+                        <li>Add Items:   </li>
+                        <li>Add Promotions: </li>
+                        <li>Add Events:       </li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="mac-shortcuts-1-2">
+                    <ul>
+                        <li>Control + i  </li>
+                        <li>Control + p </li>
+                        <li>Control + e       </li>
+                       
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            </div>
+            
+
+         </section>
+        
+          <!--Settings- End-->
+
+         <!--Javascript-Start-->
+    <script src ="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Error </title>
+    <link rel="stylesheet" href="error.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    
+</head>
+<body>
+    <div class="logo">
+        <h1>Gallary Cafe</h1>
+    </div>
+    <div class="animation" id="animation">
+        <lottie-player src="https://lottie.host/69e6c7b7-38ef-4355-ba23-d40952bef942/fSfBsQ4Gf4.json" background="##ffffff" speed="1" style="width: 1000px; height: 1000px"  autoplay direction="1" mode="normal"></lottie-player>
+    </div>
+    <div class="error-code" id="text">
+        <h1>4<span style="color:rgb(181, 6, 6);">0</span>3</h1>
+
+    </div>
+    <div class="error-description" id="text1">
+       <h2>Unauthorized Access!</h2>
+       <p>Please check your <b>Username</b> and <b>Password</b>, or Try different user credentials.</p>
+    </div>
+    
+    <div class="back-btn" id="text2">
+        <a href="login.php" >Back to Home</a>
+    </div>
+    <script>
+        var back=document.getElementById("text");
+        var back1=document.getElementById("text1");
+        var back2=document.getElementById("text2");
+        var anime=document.getElementById("animation");
+        setTimeout(function(){
+        anime.style.opacity="0";
+        setTimeout(function(){
+            anime.style.display="none";
+        },801)
+        
+    },800);
+
+        setTimeout(function(){
+        back.style.opacity="1";
+        back1.style.opacity="1";
+        back2.style.opacity="1";
+    },1000);
+
+    </script>
+</body>
+</html>
