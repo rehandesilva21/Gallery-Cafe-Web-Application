@@ -1,2 +1,2 @@
-# gallerycafe-rehan
-rehan gallery cafe
+# The Gallery Cafe Web Application
+
